@@ -46,9 +46,7 @@ docker images
 
 It should display our tagged version of image with other images available:
 
-
-<p>REPOSITORY                                     TAG       IMAGE ID       CREATED          SIZE</p>
-<p>monir0908.azurecr.io/my-nginx                  v1        51086ed63d8c   2 days ago       142MB</p>
+![Tagged Image](image_tagged.PNG)
 
 
 
