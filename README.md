@@ -19,9 +19,11 @@ To login to the `acr`
 ```
 az acr login -n monir0908
 ```
-
+![Tagged Image](image_id.PNG)
 For example, let's say we have an image in our machine called `nginx`. And we want that image to be sent to azure `acr`. <br>
 Before doing that, we need to `tag` our potential image that we want to push on to the `acr` registry. In our case, it is `nginx` image.
+
+
 
 ### Step 03<hr>
 To check images stored in your machine
