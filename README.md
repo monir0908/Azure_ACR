@@ -42,7 +42,7 @@ Now, it is displaying all the images stroed in our local machine.
 We have 5 images in our local machine. Let's pick `nginx` image for pushing it to the `acr`.
 
 
-![Tagged Image](image_list_in_local_machine.PNG)
+![image_list_in_local_machine](https://user-images.githubusercontent.com/47719314/194698498-648779fa-9c72-4e70-8be6-89bfe4ea7447.PNG)
 
 
 ### Step 04 :  Tagging Image<hr>
@@ -58,7 +58,7 @@ To tag an image, 4 things are necessay:
 So let's copy the `IMAGE ID` of `nginx` image. In our case, it is `51086ed63d8c`.
 
 
-![Tagged Image](image_id.PNG)
+![image_id](https://user-images.githubusercontent.com/47719314/194698531-dc5a8bca-dbec-428f-9765-7f191f8b3650.PNG)
 
 What we have now:<br>
 - `image_id_that_we_want_to_push` : 51086ed63d8c (nginx image id)
@@ -78,8 +78,7 @@ docker images
 
 It should display our tagged version of image with other images available:
 
-![Tagged Image](image_tagged.PNG)
-
+![image_tagged](https://user-images.githubusercontent.com/47719314/194698562-7a61d98e-496a-4267-ba48-a17e15d724ac.PNG)
 
 
 ### Step 05 : Pushing Image to the ACR<hr>
@@ -90,7 +89,7 @@ docker push monir0908.azurecr.io/my-nginx:v1
 
 It will start pushing it to the `acr` and show the following when done.
 
-![Tagged Image](pushed_to_acr.PNG)
+![pushed_to_acr](https://user-images.githubusercontent.com/47719314/194698586-ff2badd2-af2c-4317-b247-47fea32ca61e.PNG)
 
 
 ### Step 06 : Checking Image in the ACR<hr>
@@ -103,7 +102,8 @@ az acr repository list -n monir0908
 
 It is showing our expected image <b>(i.e. my-nginx)</b> in the list.
 
-![Tagged Image](cheked_repo_pushed.PNG)
+![cheked_repo_pushed](https://user-images.githubusercontent.com/47719314/194698592-3c6097b0-ab2a-4433-9a1d-bd7ae800917f.PNG)
+
 
 
 Thank you!!
