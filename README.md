@@ -20,19 +20,19 @@ To login to the `acr`
 az acr login -n monir0908
 ```
 
-For example, let's say we have an image in our machine called `nginx`. And we want that image to be sent to azure `acr`. <br>
-Before doing that, we need to `tag` our potential image that we want to push on to the `acr` registry. In our case, it is `nginx` image.
-
-
+To chek the list of images we have in our `acr`
+```
+az acr repository list -n monir0908
+```
 
 ### Step 03<hr>
-To check images stored in your machine
+To check the list of images stored in your machine
 
 ```
 docker images
 ```
 
-Now, it will display all the images stroed in our local machine. 
+Now, it is displaying all the images stroed in our local machine. 
 We have 5 images in our local machine. Let's pick `nginx` image for pushing it to the `acr`.<br>
 
 ![Tagged Image](image_list_in_local_machine.PNG)
@@ -72,6 +72,12 @@ It will start pushing it to the `acr` and show the following when done.
 ![Tagged Image](pushed_to_acr.PNG)
 
 
+Now, we can check if the repo <b>(i.e. my-nginx)</b> can be found in our registry list in `acr`.
+To check:
+
+```
+az acr repository list -n monir0908
+```
 
 
 
