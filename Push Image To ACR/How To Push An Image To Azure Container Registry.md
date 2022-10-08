@@ -104,6 +104,14 @@ It is showing our expected image <b>(i.e. my-nginx)</b> in the list.
 
 ![cheked_repo_pushed](https://user-images.githubusercontent.com/47719314/194698592-3c6097b0-ab2a-4433-9a1d-bd7ae800917f.PNG)
 
+Or we can run:
+
+```
+az acr repository list -n monir0908 --output table
+```
+
+![pushed_image_output](https://user-images.githubusercontent.com/47719314/194703135-5f840abf-e167-4592-8b2a-ebbace780240.PNG)
+
 
 
 Thank you!!
