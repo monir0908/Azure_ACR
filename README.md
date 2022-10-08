@@ -1,7 +1,7 @@
 # Azure_ACR
 
 ### Step 01<hr>
-Go to Azure Portal and create a container registry (e.g. registry name as: monir0908). <br>
+Let's go to <b>Azure Portal</b> and create a container registry (e.g. registry name as: monir0908). <br>
 Once the deployment is successful, it will provide us the following:<br>
 
 <b>Login server:</b> monir0908.azurecr.io <br> 
@@ -9,43 +9,57 @@ Once the deployment is successful, it will provide us the following:<br>
 We will need this `login server` later.
 
 ### Step 02<hr>
-I am assuming we have `azure cli` installed. If yes, then type:<br>
-
+I am assuming we have `azure cli` installed. If yes, then type:
 ```
 az login
 ```
 
-To login to the `acr`
+To login to the `acr`:
 ```
 az acr login -n monir0908
 ```
 
-To chek the list of images we have in our `acr`
+To chek the list of images we have in our `acr`:
 ```
 az acr repository list -n monir0908
 ```
 
 ### Step 03<hr>
-To check the list of images stored in your machine
+To check the list of images stored in our local machine:
 
 ```
 docker images
 ```
 
 Now, it is displaying all the images stroed in our local machine. 
-We have 5 images in our local machine. Let's pick `nginx` image for pushing it to the `acr`.<br>
+We have 5 images in our local machine. Let's pick `nginx` image for pushing it to the `acr`.
+
 
 ![Tagged Image](image_list_in_local_machine.PNG)
 
 
-We need the `IMAGE ID` of the `nginx` image. Let's copy the `IMAGE ID` of `nginx` image. In our case it is `51086ed63d8c`.<br>
+### Step 04<hr>
+It is mandatory to tag an image before pushing it to the `acr`.
+To tag an image, 4 things are necessay:
+
+- `image_id_that_we_want_to_push`
+- `acr_login_server_url`
+- `pushable_image_any_name`
+- `pushable_image_version`
+
+
+So let's copy the `IMAGE ID` of `nginx` image. In our case, it is `51086ed63d8c`.
+
+
 ![Tagged Image](image_id.PNG)
 
-### Step 04<hr>
-To tag a image:<br>
+What we have now:<br>
+- `image_id_that_we_want_to_push` : 51086ed63d8c (nginx image id)
+- `acr_login_server_url`: monir0908.azurecr.io
+- `pushable_image_any_name`: my-nginx (any chosen name)
+- `pushable_image_version`: v1 (could have written latest)
 
-`docker tag <image_id_that_we_want_to_push> <acr_login_server> / <any_name> : <version>`
-
+Let's tag our `ngnix` image with the above detail:
 ```
 docker tag 51086ed63d8c monir0908.azurecr.io/my-nginx:v1
 ```
