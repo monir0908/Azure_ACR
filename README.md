@@ -6,7 +6,7 @@ Once the deployment is successful, it will provide us the following:<br>
 
 <b>Login server:</b> monir0908.azurecr.io <br> 
 
-We will need this login server later.
+We will need this `login server` later.
 
 ### Step 02<hr>
 I am assuming we have `azure cli` installed. If yes, then type:<br>
@@ -79,25 +79,9 @@ To check:
 az acr repository list -n monir0908
 ```
 
+It is showing our expected image <b>(i.e. my-nginx)</b> in the list.
+
+![Tagged Image](cheked_repo_pushed.PNG)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Thank you!!
