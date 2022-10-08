@@ -33,20 +33,24 @@ docker images
 ```
 
 Now, it will display all the images stroed in our local machine. 
-We have 5 images in our local machine. Let's pick `nginx` image for pushing it to the `acr`.
-![Tagged Image](image_id.PNG)
+We have 5 images in our local machine. Let's pick `nginx` image for pushing it to the `acr`.<br>
 
-We need the `IMAGE ID` of the `nginx` image. Let's copy the `IMAGE ID` of `nginx` image.
-In our case it is `51086ed63d8c`.
+![Tagged Image](image_list_in_local_machine.PNG)
+
+
+We need the `IMAGE ID` of the `nginx` image. Let's copy the `IMAGE ID` of `nginx` image. In our case it is `51086ed63d8c`.<br>
 ![Tagged Image](image_id.PNG)
 
 ### Step 04<hr>
-To tag a image:
+To tag a image:<br>
+
+`docker tag <image_id_that_we_want_to_push> <acr_login_server> / <any_name> : <version>`
+
 ```
 docker tag 51086ed63d8c monir0908.azurecr.io/my-nginx:v1
 ```
 
-Let's run the follwing command to see if tagging worked:
+Let's run the follwing command to see if `image tagging` worked:
 ```
 docker images
 ```
@@ -55,6 +59,17 @@ It should display our tagged version of image with other images available:
 
 ![Tagged Image](image_tagged.PNG)
 
+
+
+### Step 05<hr>
+To push the image to `acr`:
+```
+docker push monir0908.azurecr.io/my-nginx:v1
+```
+
+It will start pushing it to the `acr` and show the following when done.
+
+![Tagged Image](pushed_to_acr.PNG)
 
 
 
